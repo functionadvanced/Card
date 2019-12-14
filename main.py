@@ -50,17 +50,21 @@ class BattleField:
             print("Already full!")
         else:
             self.battle[owner].append(what)
+
+    def remove(self, what: Soldier, owner: int):
+        self.battle[owner].remove(what)
     
     def beginBattle(self):
-        for player_index in range(2):
-            for _soldier in self.battle[player_index]:
-                _soldier.cd = 100
-        while(True):
-            for player_index in range(2):
-                for _soldier in self.battle[player_index]:
-                    Rules.update_cd(_soldier)
-                    if _soldier.cd < 0:
-                        _soldier.attack()
+        pass
+        # for player_index in range(2):
+        #     for _soldier in self.battle[player_index]:
+        #         _soldier.cd = 100
+        # while(True):
+        #     for player_index in range(2):
+        #         for _soldier in self.battle[player_index]:
+        #             Rules.update_cd(_soldier)
+        #             if _soldier.cd < 0:
+        #                 _soldier.attack()
 
     def display(self):
         print("Player 1 has soldiers:")
@@ -76,7 +80,7 @@ class Phase:
         self.battleField = BattleField(Phase.MAX_SOLDIER_NUM)
 
     def battlePhase(self):
-        
+        pass
 
 
 
