@@ -1,0 +1,3 @@
+class AttackLogic:
+    #
+    # attack =
